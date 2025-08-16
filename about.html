@@ -102,6 +102,56 @@
             </div>
         </section>
     </main>
+                                          <audio id="bg-music" src="audio/nakitaru.mp3" loop preload="auto"></audio>
+
+<script>
+(function () {
+  const audio = document.getElementById("bg-music");
+  let started = false;
+
+  // Restore posisi setelah metadata siap
+  audio.addEventListener("loadedmetadata", () => {
+    const saved = parseFloat(localStorage.getItem("musicTime") || "0");
+    if (!isNaN(saved) && saved > 0) {
+      try {
+        audio.currentTime = Math.min(saved, audio.duration || saved);
+      } catch (e) {}
+    }
+  });
+
+  // Simpan posisi berkala + saat mau pindah halaman
+  const saveTime = () => {
+    if (!audio.paused) localStorage.setItem("musicTime", String(audio.currentTime));
+  };
+  const saver = setInterval(saveTime, 500);
+  window.addEventListener("beforeunload", saveTime);
+
+  // Coba mulai; kalau gagal (autoplay diblokir), biarkan trigger tetap aktif
+  async function tryStart() {
+    if (started) return;
+    try {
+      await audio.play();
+      started = true;
+      removeTriggers();
+    } catch (err) {
+      // Autoplay masih diblokir—tunggu interaksi lain (klik/tap)
+    }
+  }
+
+  function removeTriggers() {
+    document.removeEventListener("click", tryStart);
+    document.removeEventListener("scroll", tryStart);
+    document.removeEventListener("keydown", tryStart);
+    document.removeEventListener("touchstart", tryStart);
+  }
+
+  // Multiple pemicu: klik, scroll, key, touch
+  document.addEventListener("click", tryStart);
+  document.addEventListener("scroll", tryStart);
+  document.addEventListener("keydown", tryStart);
+  document.addEventListener("touchstart", tryStart, { passive: true });
+})();
+</script>
     
     <footer>
         <p>&copy; 2025 - Heru Wahyu Pratama | ヘル</p>
@@ -109,4 +159,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
