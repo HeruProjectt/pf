@@ -198,7 +198,7 @@ nav {
 
   background-image:
   linear-gradient(rgba(18, 18, 18, 0.92), rgba(18, 18, 18, 0.92)),
-  url('images/hero-background.jpg');
+  url('https://raw.githubusercontent.com/HeruProjectt/imagespf/refs/heads/main/images/hero-background.jpg');
 
   background-size: cover;
   background-position: center;
