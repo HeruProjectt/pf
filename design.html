@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Design | Portofolio Heru Wahyu Pratama</title>
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/HeruProjectt/imagespf/refs/heads/main/images/icon.png" type="image/x-icon" />
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+rel="stylesheet"
+/>
+</head>
+<body>
+<div id="particles-js"></div>
+
+<header>
+<nav>
+<a
+href="index.html"
+class="heruproject"
+style="
+display: flex;
+align-items: center;
+gap: 0px;
+text-decoration: none;
+"
+>
+<img
+src="https://raw.githubusercontent.com/HeruProjectt/imagespf/refs/heads/main/images/logo.png"
+alt="Logo"
+style="height: 50px"
+/>
+<span
+style="
+font-size: 24px;
+font-weight: bold;
+color: #00aaff;
+"
+>Heru</span
+>
+</a>
+
+<ul class="nav-links">
+<li><a href="index.html">Beranda</a></li>
+<li><a href="about.html">Tentang</a></li>
+<li><a href="project.html">Project</a></li>
+<li><a href="contact.html">Kontak</a></li>
+<li><a href="design.html"class="active">Design</a></li>
+<li><a href="musik.html">Musik Player</a></li>
+</ul>
+<div class="hamburger">
+<div class="line"></div>
+<div class="line"></div>
+<div class="line"></div>
+</div>
+</nav>
+</header>
+
+<main>
+<section class="container page-header">
+<h1 class="section-title2 animate-on-scroll">Design</h1>
+</section>
+
+<section class="container about-page-content">
+<div class="about-flex">
+<div class="about-image-container animate-on-scroll">
+<img
+src="https://raw.githubusercontent.com/HeruProjectt/imagespf/refs/heads/main/images/logo.png"
+alt="Foto Heru Wahyu Pratama"
+class="about-page-image"
+/>
+</div>
+<div class="about-text-container animate-on-scroll">
+<h2>Slide Design</h2>
+<p>
+design sedang dimuat
+<strong>BELUM TERSEDIA SEMENTARA WAKTU</strong>
+terimakasih
+</p>
+</div>
+</div>
+</section>
+<main>
+<div class="coverflow" id="coverflowSlider">
+<div class="cover-item">
+<img src="https://raw.githubusercontent.com/HeruProjectt/imagespf/refs/heads/main/images/slide1.jpg" class="bordergambar" alt="Slide 1" />
+</div>
+<div class="cover-item">
+<img src="https://raw.githubusercontent.com/HeruProjectt/imagespf/refs/heads/main/images/slide2.jpg" class="bordergambar" alt="Slide 2" />
+</div>
+<div class="cover-item">
+<img src="https://raw.githubusercontent.com/HeruProjectt/imagespf/refs/heads/main/images/slide3.jpg" class="bordergambar" alt="Slide 3" />
+</div>
+<div class="cover-item">
+<img src="https://raw.githubusercontent.com/HeruProjectt/imagespf/refs/heads/main/images/slide4.jpg" class="bordergambar" alt="Slide 4" />
+</div>
+<div class="cover-item">
+<img src="https://raw.githubusercontent.com/HeruProjectt/imagespf/refs/heads/main/images/slide5.jpg" class="bordergambar" alt="Slide 5" />
+</div>
+<div class="cover-item">
+<img src="https://raw.githubusercontent.com/HeruProjectt/imagespf/refs/heads/main/images/slide6.jpg" class="bordergambar" alt="Slide 6" />
+</div>
+<div class="cover-item">
+<img src="https://raw.githubusercontent.com/HeruProjectt/imagespf/refs/heads/main/images/slide7.jpg" class="bordergambar" alt="Slide 6" />
+</div>
+</div>
+
+<style>
+#coverflowSlider {
+position: relative;
+top: -10px;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+width: 100%;
+height: 400px;
+perspective: 1000px;
+}
+#coverflowSlider .cover-item {
+position: absolute;
+transition:
+transform 0.6s ease,
+opacity 0.6s ease;
+opacity: 0.4;
+}
+#coverflowSlider .cover-item img {
+width: 280px;
+height: 360px;
+object-fit: cover;
+border-radius: 14px;
+box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+#coverflowSlider .cover-item.active {
+transform: translateX(0) scale(1.1);
+opacity: 1;
+z-index: 5;
+}
+#coverflowSlider .cover-item.left {
+transform: translateX(-220px) rotateY(25deg) scale(0.9);
+z-index: 4;
+}
+#coverflowSlider .cover-item.right {
+transform: translateX(220px) rotateY(-25deg) scale(0.9);
+z-index: 4;
+}
+#coverflowSlider .cover-item.far-left {
+transform: translateX(-400px) rotateY(35deg) scale(0.8);
+z-index: 3;
+}
+#coverflowSlider .cover-item.far-right {
+transform: translateX(400px) rotateY(-35deg) scale(0.8);
+z-index: 3;
+}
+@media (max-width: 768px) {
+#coverflowSlider {
+height: 300px;
+}
+#coverflowSlider .cover-item img {
+width: 180px;
+height: 240px;
+}
+#coverflowSlider .cover-item.left {
+transform: translateX(-140px) rotateY(25deg)
+scale(0.85);
+}
+#coverflowSlider .cover-item.right {
+transform: translateX(140px) rotateY(-25deg)
+scale(0.85);
+}
+#coverflowSlider .cover-item.far-left {
+transform: translateX(-240px) rotateY(35deg)
+scale(0.7);
+}
+#coverflowSlider .cover-item.far-right {
+transform: translateX(240px) rotateY(-35deg)
+scale(0.7);
+}
+}
+</style>
+
+<script>
+(function () {
+const root = document.getElementById("coverflowSlider");
+const slides = Array.from(
+root.querySelectorAll(".cover-item")
+);
+let i = 0,
+timer;
+
+function update() {
+slides.forEach((s, idx) => {
+s.className = "cover-item";
+if (idx === i) s.classList.add("active");
+else if (
+idx ===
+(i - 1 + slides.length) % slides.length
+)
+s.classList.add("left");
+else if (
+idx ===
+(i - 2 + slides.length) % slides.length
+)
+s.classList.add("far-left");
+else if (idx === (i + 1) % slides.length)
+s.classList.add("right");
+else if (idx === (i + 2) % slides.length)
+s.classList.add("far-right");
+});
+}
+function next() {
+i = (i + 1) % slides.length;
+update();
+}
+function prev() {
+i = (i - 1 + slides.length) % slides.length;
+update();
+}
+function start() {
+timer = setInterval(next,
+1500);
+}
+function stop() {
+clearInterval(timer);
+}
+
+update();
+start();
+
+root.addEventListener("mouseenter",
+stop);
+root.addEventListener("mouseleave",
+start);
+
+let x0 = null;
+root.addEventListener(
+"touchstart",
+e => (x0 = e.touches[0].clientX),
+{
+passive: true
+}
+);
+root.addEventListener("touchend",
+e => {
+if (x0 == null) return;
+const dx = e.changedTouches[0].clientX - x0;
+if (Math.abs(dx) > 40) (dx < 0 ? next: prev)();
+x0 = null;
+});
+})();
+</script>
+</main>
+</main>
+
+<audio
+id="bg-music"
+src="audio/nakitaru.mp3"
+loop
+preload="auto"
+></audio>
+
+<script>
+(function () {
+const audio = document.getElementById("bg-music");
+let started = false;
+
+audio.addEventListener("loadedmetadata",
+() => {
+const saved = parseFloat(
+localStorage.getItem("musicTime") || "0"
+);
+if (!isNaN(saved) && saved > 0) {
+try {
+audio.currentTime = Math.min(
+saved,
+audio.duration || saved
+);
+} catch (e) {}
+}
+});
+
+const saveTime = () => {
+if (!audio.paused)
+localStorage.setItem(
+"musicTime",
+String(audio.currentTime)
+);
+};
+const saver = setInterval(saveTime, 500);
+window.addEventListener("beforeunload", saveTime);
+
+async function tryStart() {
+if (started) return;
+try {
+await audio.play();
+started = true;
+removeTriggers();
+} catch (err) {
+}
+}
+
+function removeTriggers() {
+document.removeEventListener("click", tryStart);
+document.removeEventListener("scroll", tryStart);
+document.removeEventListener("keydown", tryStart);
+document.removeEventListener("touchstart", tryStart);
+}
+
+document.addEventListener("click", tryStart);
+document.addEventListener("scroll", tryStart);
+document.addEventListener("keydown", tryStart);
+document.addEventListener("touchstart", tryStart, {
+passive: true
+});
+})();
+</script>
+
+<footer>
+<p>
+&copy; 2025 - Heru Wahyu Pratama | ヘル
+</p>
+</footer>
+
+<script src="js/particles.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
