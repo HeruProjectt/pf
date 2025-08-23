@@ -61,7 +61,7 @@ const music_list = [
         img: "images/musik1.png",
         name: "Dj Angel Love",
         artist: "none",
-        music: "music/angel live.mp3"
+        music: "music/angel love.mp3"
     },
     {
         img: "images/musik2.png",
