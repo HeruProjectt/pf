@@ -50,7 +50,25 @@ const music_list = [
         name: "Dj Tia Monika",
         artist: "Dek Aroel",
         music: "music/tia monika.mp3"
-    }
+    },
+    {
+        img: "images/musik.png",
+        name: "Mejikuhibiniu",
+        artist: "none",
+        music: "music/mejikuhibiniu.mp3"
+    },
+    {
+        img: "images/musik1.png",
+        name: "Dj Angel Love",
+        artist: "none",
+        music: "music/angel live.mp3"
+    },
+    {
+        img: "images/musik2.png",
+        name: "Nona Ambon",
+        artist: "none",
+        music: "nona ambon.mp3"
+    },
 ];
 
 loadTrack(track_index);
