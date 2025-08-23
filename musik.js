@@ -67,7 +67,7 @@ const music_list = [
         img: "images/musik2.png",
         name: "Nona Ambon",
         artist: "none",
-        music: "nona ambon.mp3"
+        music: "music/nona ambon.mp3"
     },
 ];
 
